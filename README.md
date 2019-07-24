@@ -4,6 +4,21 @@
 에 참가한 NAFMA 팀의 소스코드를 담은 리파지토리입니다.  
 
 
+
+## 0. 데이터 다운로드
+https://arena.kakao.com/c/2/data 에 제공된 파일을 
+res 디렉토리에 다운로드 받습니다. 
+
+```bash
+├── res
+   ├── /contents
+   ├── /predict
+   ├── /read
+   ├── magazine.json
+   ├── metadata.json
+   └── users.json
+``` 
+
 ## 1. 모델 입력 데이터 생성
 독자가 읽은 글과 작가가 생성한 글의 키워드를 이용하여 문장을 생성합니다.
 
