@@ -1,0 +1,9 @@
+six
+fire
+mmh3
+tqdm
+tensorflow
+pandas
+matplotlib
+numpy
+itertools
