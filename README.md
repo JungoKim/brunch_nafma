@@ -12,7 +12,8 @@ $> python prepare_d2v.py
 ``` 
 
 ## 2. 모델 학습 (Doc2Vec)
-tensorflow 를 이용하여 Doc2Vec을 구현하였습니다. 독
+tensorflow 를 이용하여 Doc2Vec을 구현하였습니다.
+독자의 작가별 선호도를 추천에 반영하기 위한 모델입니다.
 
 ```bash
 $> python train.py
