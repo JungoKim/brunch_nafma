@@ -12,7 +12,7 @@ $> python prepare_d2v.py
 ``` 
 
 ## 2. 모델 학습 (Doc2Vec)
-tensorflow 를 이용하여 Doc2Vec을 구현하였습니다. 
+tensorflow 를 이용하여 Doc2Vec을 구현하였습니다. 독
 
 ```bash
 $> python train.py
