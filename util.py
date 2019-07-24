@@ -2,10 +2,11 @@
 import os
 import config as conf
 
+data_root = './res'
 
 def iterate_data_files(from_dtm, to_dtm):
     from_dtm, to_dtm = map(str, [from_dtm, to_dtm])
-    read_root = os.path.join(conf.data_root, 'read')
+    read_root = os.path.join(data_root, 'read')
     for fname in os.listdir(read_root):
         if len(fname) != len('2018100100_2018100103'):
             continue
