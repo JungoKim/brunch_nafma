@@ -77,5 +77,5 @@ $> python inference.py
 
 독자가 읽은 글들과 작가가 생성한 글의 키워드를 이용하여 문서에 넣을 sentence를 준비하였는데 키워드로만 모델을 만든 이유는 tokenizing, stopword removal 등 전처리 과정이 단순해지기 때문입니다. 그래도 중복 제거 등의 일부 전처리는 여전히 필요합니다.
 
-처음에는 일반적으로 많이 쓰이는 gensim doc2vec이 사용되는데 라이센스 문제로 쓸 수 없는 상황임을 인지하여 tensorflow를 사용하여 변경 구현하였습니다.
+처음에는 일반적으로 많이 쓰이는 gensim doc2vec을 사용했으나 라이센스 문제로 쓸 수 없는 상황임을 인지하여 tensorflow를 사용하여 변경 구현하였습니다.
 https://github.com/sachinruk/doc2vec_tf  (Apache 2.0 라이센스) 코드를 활용하였습니다. 
