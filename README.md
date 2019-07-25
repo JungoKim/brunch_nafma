@@ -29,9 +29,11 @@ $> python prepare_d2v.py
 ``` 
 
 ## 2. 모델 학습 (Doc2Vec)
-tensorflow 를 이용하여 Doc2Vec을 구현하였습니다.
-읽은 글들로 추정되는 독자와 작성한 글들로 추정되는 작가간의 유사도를 추천에 반영하기 위한 모델입니다.
-개별 단어의 embedding에는 word2vec이 쓰이고 문장, paragraph, 문서 등의 보다 큰 단위의 텍스트를 embedding하는 데에는 doc2vec 기술이 쓰여집니다.
+Doc2Vec은 읽은 글들로 추정되는 독자와 작성한 글들로 추정되는 작가간의 유사도를 추천에 반영하기 위해 필요한 모델입니다.
+단어의 embedding에는 word2vec이 쓰이고 문장, paragraph, 문서 등의 보다 큰 단위의 텍스트를 embedding하는 데에는 doc2vec 기술이 쓰여집니다.  
+독자와 작가를 embedding하는 방법에는 다음과 같은 두가지가 있을 수 있는데 전자는 3월 이후의 글에 적용할 수 없으므로 후자를 사용하였습니다.
+1. 글을 단어로 보고 독자가 읽은 글의 sequence와 작가가 작성한 글의 sequence를 문장으로 보아서 doc2vec으로 embedding
+2. 글을 대표하는 자연어 단어로 embedding하는 방법
 일반적으로 gensim을 사용하는데 라이센스 문제로 쓸 수 없는 상황이라 tensorflow를 사용하였습니다.
 
 ```bash
