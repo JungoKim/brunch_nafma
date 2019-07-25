@@ -27,7 +27,7 @@ res 디렉토리에 다운로드 받습니다.
 ```bash
 $> python prepare_d2v.py
 ``` 
-생성 결과 파일은 ./res/writer_user_sentences_keyword.txt 
+생성 결과 파일은 ./res/writer_user_sentences_keyword.txt 입니다.
 
 ## 2. 모델 학습 (Doc2Vec)
 Doc2Vec은 읽은 글들로 추정되는 독자와 작성한 글들로 추정되는 작가간의 유사도를 추천에 반영하기 위해 필요한 모델입니다.
