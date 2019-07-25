@@ -25,7 +25,7 @@ res 디렉토리에 다운로드 받습니다.
 ```bash
 $> python prepare_d2v.py
 ``` 
-생성 결과 파일은 ./res/writer_user_sentences_keyword.txt 입니다.
+생성 결과 파일은 ./res/writer_user_sentences_keyword.txt 입니다.  
 중복 조회를 제거하는 과정(리스트를 세트로 변환)에서 랜덤성이 있어서 독자가 읽은 글의 키워드의 순서가 바뀌어 나올 수 있습니다.
 
 ### 1.2. 모델 학습 (Doc2Vec)
