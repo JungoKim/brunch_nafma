@@ -37,13 +37,16 @@ Doc2Vec은 읽은 글들로 추정되는 독자와 작성한 글들로 추정되
 1. 각 글을 단어로 보고 독자가 읽은 글의 sequence와 작가가 작성한 글의 sequence를 문장으로 보아서 embedding
 2. 자연어 단어로 각 글의 대표 sentence를 준비하고 (독자id + 읽은글 sentence), (작가id + 작성한글 sentence) 로 embedding
 
-일반적으로 gensim doc2vec이 사용되는데 라이센스 문제로 쓸 수 없는 상황이라 tensorflow를 사용하였습니다.
+일반적으로 gensim doc2vec이 사용되는데 라이센스 문제로 쓸 수 없는 상황이라 tensorflow를 사용하여 구현하였습니다.
 
 ```bash
 $> python train.py
 ``` 
 
-모델의 크기는 336MB 이고 분할 압축되어 저장되어 있습니다. 
+train.py의 최종 결과물은 tensorflow model 파일과 embedding matrix 파일입니다.
+
+tensorflow model 은 model 디렉토리에 저장됩니다. 
+모델의 크기는 336MB 이고 분할 압축되어 저장되어 있습니다.  (github 용량 제한 때문에..)
 아래의 명령어로 압축해제 할 수 있습니다. 
 
 ```bash
@@ -51,8 +54,12 @@ $> cd model
 $> cat model.tar.gza* | tar xvfz -
 ``` 
 
+embedding matrix 파일은 ./doc_embeddings_keyword.npy 입니다. 
+inference.py 에서 해당 matrix 를 이용하여 독자와 작가간의 유사도를 계산합니다. 
+
 
 ## 3. 평가 데이터 생성 
+inference.py을 실행하면 ./recommend.txt 결과 파일이 생성됩니다.
 
 ```bash
 $> python inference.py
