@@ -20,7 +20,9 @@ res 디렉토리에 다운로드 받습니다.
 ``` 
 
 ## 1. 모델 입력 데이터 생성
-독자가 읽은 글과 작가가 생성한 글의 키워드를 이용하여 문장을 생성합니다.
+독자가 읽은 글들과 작가가 생성한 글의 키워드를 이용하여 문장을 생성합니다.
+키워드로만 모델을 만든 이유는 tokenizing, stopword removal 등 전처리 과정이 단순해지기 때문입니다.
+(전처리에 필요한 konlpy를 쓰는 것이 불이익이 생길 수 있다니 ...)
 
 ```bash
 $> python prepare_d2v.py
@@ -28,7 +30,9 @@ $> python prepare_d2v.py
 
 ## 2. 모델 학습 (Doc2Vec)
 tensorflow 를 이용하여 Doc2Vec을 구현하였습니다.
-독자의 작가별 선호도를 추천에 반영하기 위한 모델입니다.
+읽은 글들로 추정되는 독자와 작성한 글들로 추정되는 작가간의 유사도를 추천에 반영하기 위한 모델입니다.
+개별 단어의 embedding에는 word2vec이 쓰이고 문장, paragraph, 문서 등의 보다 큰 단위의 텍스트를 embedding하는 데에는 doc2vec 기술이 쓰여집니다.
+일반적으로 gensim을 사용하는데 라이센스 문제로 쓸 수 없는 상황이라 tensorflow를 사용하였습니다.
 
 ```bash
 $> python train.py
