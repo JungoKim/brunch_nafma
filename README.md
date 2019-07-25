@@ -43,7 +43,7 @@ Doc2Vec은 읽은 글들로 추정되는 독자와 작성한 글들로 추정되
 $> python train.py
 ``` 
 
-train.py의 최종 결과물은 tensorflow model 파일과 embedding matrix 파일입니다.
+train.py의 최종 결과물은 tensorflow model 파일과 embedding vector 파일입니다.
 
 tensorflow model 은 model 디렉토리에 저장됩니다. 
 모델의 크기는 336MB 이고 분할 압축되어 저장되어 있습니다.  (github 용량 제한 때문에..)
@@ -54,8 +54,8 @@ $> cd model
 $> cat model.tar.gza* | tar xvfz -
 ``` 
 
-embedding matrix 파일은 ./doc_embeddings_keyword.npy 입니다. 
-inference.py 에서 해당 matrix 를 이용하여 독자와 작가간의 유사도를 계산합니다. 
+embedding vector 파일은 ./doc_embeddings_keyword.npy 입니다. 
+inference.py 에서 해당 vector를 이용하여 독자와 작가간의 유사도를 계산합니다. 
 
 
 ## 3. 평가 데이터 생성 
