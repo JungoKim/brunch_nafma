@@ -32,9 +32,10 @@ $> python prepare_d2v.py
 Doc2Vec은 읽은 글들로 추정되는 독자와 작성한 글들로 추정되는 작가간의 유사도를 추천에 반영하기 위해 필요한 모델입니다.
 단어의 embedding에 쓰이는 모델이 word2vec이고 문단, 문서 등의 보다 큰 단위의 텍스트를 embedding하는 데 쓰이는 모델이 doc2vec입니다.  
 
-독자와 작가를 embedding하는 방법에는 다음과 같은 두가지가 있을 수 있는데 전자는 3월 이후의 글에 적용할 수 없으므로 후자를 사용하였습니다.
-1. 글을 단어로 보고 독자가 읽은 글의 sequence와 작가가 작성한 글의 sequence를 문장으로 보아서 doc2vec으로 embedding
-2. 글을 대표하는 자연어 단어로 embedding하는 방법
+독자와 작가를 embedding하는 방법에는 다음과 같은 두가지가 있을 수 있는데 전자는 3월 이후의 글에 적용할 수 없어서 후자를 사용하였습니다.  
+1. 각 글을 단어로 보고 독자가 읽은 글의 sequence와 작가가 작성한 글의 sequence를 문장으로 보아서 embedding
+2. 자연어 단어로 각 글의 대표 sentence를 준비하고 (독자id + 읽은글 sentence), (작가id + 작성한글 sentence) 로 embedding
+
 일반적으로 gensim doc2vec이 사용되는데 라이센스 문제로 쓸 수 없는 상황이라 tensorflow를 사용하였습니다.
 
 ```bash
