@@ -76,7 +76,7 @@ Content-based recommendation이란 컨텐츠가 가지고 있는 속성을 매�
 이외로 content-based의 개념을 확장하여 독자의 작가에 대한 preference를 최대한 활용하여 추천을 하였습니다. 구독 여부와 조회 여부가 독자의 작가에 대한 preference를 나타내는 데이터입니다.
 
 ### 2.1.1 Doc2Vec 모델
-숫자가 아닌 데이터를 숫자로 바꾸어서 수식에 사용하는 기법을 머신 러닝에서 vector embedding이라고 합니다.
+숫자가 아닌 데이터를 숫자(벡터)로 바꾸어서 수식 모델에 사용하는 기법을 머신 러닝에서 vector embedding이라고 합니다. 데이터를 벡터로 바꾸고 나면 내적 또는 cosine 값을 이용하여 유사도를 계산할 수 있습니다.
 텍스트 데이터의 경우 단어의 embedding에 쓰이는 모델이 word2vec이고 문단, 문서 등의 보다 큰 단위의 텍스트를 embedding하는 데 쓰이는 모델이 doc2vec입니다.  
 독자와 작가의 성향의 유사도를 계산하기 위해서는 독자와 작가를 vector embedding 해야 합니다.
 독자는 읽은 글들로 특징화 할 수 있고 작가는 작성한 글들로 특징화 할 수 있으므로 위의 문단, 문서 데이터를 embedding하는 doc2vec 모델을 사용할 수 있습니다. 
